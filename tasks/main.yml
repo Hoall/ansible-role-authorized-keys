@@ -1,0 +1,12 @@
+---
+# tasks file for authorized-keys/
+
+- name: deploy authorized_keys for user
+  lineinfile:
+    dest="{{ authorized_keys_user_home }}/.ssh/authorized_keys"
+    line="{{ item }}"
+    owner="{{ authorized_keys_user }}"
+    group="{{ authorized_keys_group }}"
+    mode="{{ authorized_keys_mode }}"
+  with_items: "{{ AUTHORIZED_KEYS_KEYLIST }}"
+
