@@ -11,7 +11,7 @@ authorized_keys_group: root
 authorized_keys_user_home: /root
 
 # the mode for the key file
-authorized_keys_mode: 600
+authorized_keys_mode: "0600"
 
 # jinja2 list of the public ssh keys
 AUTHORIZED_KEYS_KEYLIST:
